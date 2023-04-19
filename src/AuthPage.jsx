@@ -4,7 +4,7 @@ const AuthPage = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         const { value } = e.target[0];
-        axios.post('http://localhost:3001/authenticate',
+        axios.post('https://chat-app-hjl2.onrender.com/authenticate',
         {username: value}
         ).then( r => props.onAuth({...res.data, secret: value}))
         .catch(e => console.log('error', e))
